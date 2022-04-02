@@ -8,5 +8,10 @@ https://fred.stlouisfed.org/categories/16?t=goods&rt=goods&ob=pv&od=desc
 ### Overall data of US exports of goods and services
 https://fred.stlouisfed.org/series/IEAXGS
 
+### Overall data of US exports of goods
+https://fred.stlouisfed.org/series/IEAXG
+
+### Overall data of US exports of services
+https://fred.stlouisfed.org/series/IEAXS
 
 
