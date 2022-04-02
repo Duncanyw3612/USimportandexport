@@ -2,7 +2,11 @@ introduction
 data-sources
 data-source-link
 overall-data-of-us-exports-of-goods-and-services
+overall-data-of-us-exports-of-goods
+overall-data-of-us-exports-of-services
 data-transformation
+question1
+overall-data-of-us-exports-of-goods-and-services-1
 missing-values
 results
 interactive-component
