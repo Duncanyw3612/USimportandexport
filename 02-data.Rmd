@@ -1,10 +1,8 @@
 # Data sources
-
-## Data source link
-
 The data for our project was obtained from this website:
 https://fred.stlouisfed.org/categories/16?t=goods&rt=goods&ob=pv&od=desc
 
+## Question1: Analyze the development process of U.S. export data
 ### Overall data of US exports of goods and services
 https://fred.stlouisfed.org/series/IEAXGS
 
