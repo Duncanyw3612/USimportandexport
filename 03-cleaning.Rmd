@@ -1,8 +1,8 @@
 # Data transformation
 
-## Question1
+## Question1: Analyze the development process of U.S. export data
 
-### Transformation of overall data of US exports of goods and services
+Transformation of overall data of US exports of goods and services
 
 ```{r}
 library(tidyverse)
