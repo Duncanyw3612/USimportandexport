@@ -1,1 +1,17 @@
 # Data transformation
+
+## Question1
+
+### Transformation of overall data of US exports of goods and services
+
+```{r}
+library(tidyverse)
+library(readxl)
+overall_data_exports_goods_services<-read_excel(here::here("IEAXGS.xls"))
+overall_data_exports_goods_services<-overall_data_exports_goods_services[-(1:10),]
+colnames(overall_data_exports_goods_services)<-c("Date","IEAXGS")
+overall_data_exports_goods_services<-overall_data_exports_goods_services%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
