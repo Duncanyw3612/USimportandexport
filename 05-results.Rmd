@@ -6,6 +6,17 @@ In this part, we want to analyse the development process of U.S. export data.\
 Firstly, we want to see the trend of the U.S. export data on a general level, so we combine three data sets of overall export data of goods and exports to see such trend.
 ```{r}
 library(tidyverse)
-g1_1<-Overall
+g1_1<-Overall%>%
+  mutate(Value=as.numeric(Value))%>%
+  ggplot(aes(Date,Value,color=Name))+
+  geom_line()+
+  ggtitle("Exports of goods and serives")+
+  labs(x="",y="Millions of Dollars") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
+
+g1_1
 ```
+From the picture we can see that data on exports in general have been on an upward trend in both services and goods, with the exception of a few few years.\
+We speculate that the fall around 2001 and 2008 may be due to the global financial crisis, and the fall around 2020 may be due to the changes of trade policy towards China and the COVID-19.
 
