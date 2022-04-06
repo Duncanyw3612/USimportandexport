@@ -4,6 +4,12 @@ question1-analyze-the-development-process-of-u.s.-export-data
 overall-data-of-us-exports-of-goods-and-services
 overall-data-of-us-exports-of-goods
 overall-data-of-us-exports-of-services
+exports-of-goods-general-merchandise
+exports-of-goods-general-merchandise-automotive-vehicles-parts-and-engines
+exports-of-goods-general-merchandise-capital-goods-except-automotive
+exports-of-goods-general-merchandise-consumer-goods-except-food-and-automotive
+exports-of-goods-general-merchandise-foods-feeds-and-beverages
+exports-of-goods-general-merchandise-industrial-supplies-and-materials
 data-transformation
 question1-analyze-the-development-process-of-u.s.-export-data-1
 overall-trend-in-data-of-exports-of-goods-and-services

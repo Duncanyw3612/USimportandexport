@@ -12,4 +12,22 @@ https://fred.stlouisfed.org/series/IEAXG
 ### Overall data of US exports of services
 https://fred.stlouisfed.org/series/IEAXS
 
+### Exports of Goods: General merchandise
+https://fred.stlouisfed.org/series/IEAXGM
+
+### Exports of Goods: General Merchandise: Automotive vehicles, parts, and engines 
+https://fred.stlouisfed.org/series/IEAXGAV
+
+### Exports of Goods: General Merchandise: Capital goods except automotive
+https://fred.stlouisfed.org/series/IEAXGC
+
+### Exports of Goods: General Merchandise: Consumer goods except food and automotive
+https://fred.stlouisfed.org/series/IEAXGCGA
+
+### Exports of Goods: General Merchandise: Foods, feeds, and beverages
+https://fred.stlouisfed.org/series/IEAXGFA
+
+### Exports of Goods: General Merchandise: Industrial supplies and materials
+https://fred.stlouisfed.org/series/IEAXGI
+
 
