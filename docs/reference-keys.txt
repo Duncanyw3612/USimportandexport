@@ -7,5 +7,7 @@ overall-trend-in-data-of-exports-of-goods-and-services
 missing-values
 analysis-and-results
 the-development-process-of-u.s.-export-data-from-1999-to-2021
+overall-data-of-u.s.-export-of-goods-and-services
+analysis-of-general-merchandise-in-the-exports-of-u.s.
 interactive-component
 conclusion
