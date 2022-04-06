@@ -2,6 +2,8 @@
 
 ## Question1: Analyze the development process of U.S. export data
 
+### Overall trend in data of exports of goods and services
+
 Transformation of overall data of US exports of goods and services
 
 ```{r}
@@ -14,4 +16,39 @@ overall_data_exports_goods_services<-overall_data_exports_goods_services%>%
   mutate(Date=as.numeric(Date))%>%
   mutate(Date=as.Date(Date,origin="1899-12-30"))
 ```
+
+Transformation of overall data of US exports of goods
+
+```{r}
+overall_data_exports_goods<-read_excel(here::here("IEAXG.xls"))
+overall_data_exports_goods<-overall_data_exports_goods[-(1:10),]
+colnames(overall_data_exports_goods)<-c("Date","IEAXG")
+overall_data_exports_goods<-overall_data_exports_goods%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of overall data of US exports of services
+
+```{r}
+overall_data_exports_services<-read_excel(here::here("IEAXS.xls"))
+overall_data_exports_services<-overall_data_exports_services[-(1:10),]
+colnames(overall_data_exports_services)<-c("Date","IEAXS")
+overall_data_exports_services<-overall_data_exports_services%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Join the above three data sets
+
+```{r}
+Overall<-left_join(overall_data_exports_goods_services,overall_data_exports_goods)
+Overall<-left_join(Overall,overall_data_exports_services)
+
+```
+
+
+
+
+
 

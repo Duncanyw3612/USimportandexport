@@ -1,1 +1,11 @@
-# Results
+# Analysis and  Results
+
+## The development process of U.S. export data from 1999 to 2021
+
+In this part, we want to analyse the development process of U.S. export data.\
+Firstly, we want to see the trend of the U.S. export data on a general level, so we combine three data sets of overall export data of goods and exports to see such trend.
+```{r}
+library(tidyverse)
+g1_1<-Overall
+```
+
