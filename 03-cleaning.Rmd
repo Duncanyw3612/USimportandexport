@@ -44,7 +44,9 @@ Join the above three data sets
 ```{r}
 Overall<-left_join(overall_data_exports_goods_services,overall_data_exports_goods)
 Overall<-left_join(Overall,overall_data_exports_services)
-
+Overall<-Overall%>%
+  gather(key=Name,value=Value,-Date)%>%
+  mutate(Name=forcats::fct_reorder2(Name,Date,Value))
 ```
 
 
