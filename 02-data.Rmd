@@ -3,28 +3,28 @@ The data for our project was obtained from this website:
 https://fred.stlouisfed.org/categories/16?t=goods&rt=goods&ob=pv&od=desc
 
 ## Question1: Analyze the development process of U.S. export data
-### Overall data of US exports of goods and services
+Overall data of US exports of goods and services
 https://fred.stlouisfed.org/series/IEAXGS
 
-### Overall data of US exports of goods
+Overall data of US exports of goods
 https://fred.stlouisfed.org/series/IEAXG
 
-### Overall data of US exports of services
+Overall data of US exports of services
 https://fred.stlouisfed.org/series/IEAXS
 
-### Exports of Goods: General merchandise
+Exports of Goods: General merchandise
 https://fred.stlouisfed.org/series/IEAXGM
 
-### Exports of Goods: General Merchandise: Automotive vehicles, parts, and engines 
+Exports of Goods: General Merchandise: Automotive vehicles, parts, and engines 
 https://fred.stlouisfed.org/series/IEAXGAV
 
-### Exports of Goods: General Merchandise: Capital goods except automotive
+Exports of Goods: General Merchandise: Capital goods except automotive
 https://fred.stlouisfed.org/series/IEAXGC
 
-### Exports of Goods: General Merchandise: Consumer goods except food and automotive
+Exports of Goods: General Merchandise: Consumer goods except food and automotive
 https://fred.stlouisfed.org/series/IEAXGCGA
 
-### Exports of Goods: General Merchandise: Foods, feeds, and beverages
+Exports of Goods: General Merchandise: Foods, feeds, and beverages
 https://fred.stlouisfed.org/series/IEAXGFA
 
 
