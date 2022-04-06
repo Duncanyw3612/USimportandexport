@@ -27,8 +27,8 @@ https://fred.stlouisfed.org/series/IEAXGCGA
 ### Exports of Goods: General Merchandise: Foods, feeds, and beverages
 https://fred.stlouisfed.org/series/IEAXGFA
 
-### Exports of Goods: General Merchandise: Industrial supplies and materials
-https://fred.stlouisfed.org/series/IEAXGI
+
+
 
 
 
