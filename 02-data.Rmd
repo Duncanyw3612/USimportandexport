@@ -1,2 +1,39 @@
 # Data sources
 
+# 2.2 Question 2: Analyze the import and export cooperation between the United States and different areas and countries.
+
+### 2.2.1 Islands and areas within the United States
+
+Exports of goods for U.S. Virgin Islands https://fred.stlouisfed.org/series/EXPTOTVI
+
+Exports of goods: manufactured commodities for U.S. Virgin Island https://fred.stlouisfed.org/series/EXPMANVI
+
+Exports of goods: non-manufactured commodities for U.S. Virgin Island https://fred.stlouisfed.org/series/EXPNONVI
+
+
+Exports of goods for Puerto Rico https://fred.stlouisfed.org/series/EXPNONPR
+
+Exports of goods: manufactured commodities for Puerto Rico https://fred.stlouisfed.org/series/EXPMANPR
+
+Exports of goods: non-manufactured commodities for Puerto Rico https://fred.stlouisfed.org/series/EXPNONPR
+
+
+### 2.2.2 Countries bordering the United States
+
+Exports of goods by F.A.S. basis to Canada https://fred.stlouisfed.org/series/EXPNONVI
+
+Exports of goods by F.A.S. basis to Mexico https://fred.stlouisfed.org/series/EXPMX
+
+
+### 2.2.3 Countries in Asia
+
+Exports of goods by F.A.S. basis to Japan https://fred.stlouisfed.org/series/EXPJP
+
+Exports of goods by F.A.S. basis to South Korea https://fred.stlouisfed.org/series/EXPJP
+
+
+### 2.2.4 Countries in Europe
+
+Exports of goods by F.A.S. basis to France https://fred.stlouisfed.org/series/EXPFR
+
+Exports of goods by F.A.S. basis to Germany https://fred.stlouisfed.org/series/EXPGE
