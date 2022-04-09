@@ -25,15 +25,18 @@ Exports of goods by F.A.S. basis to Canada https://fred.stlouisfed.org/series/EX
 Exports of goods by F.A.S. basis to Mexico https://fred.stlouisfed.org/series/EXPMX
 
 
-### 2.2.3 Countries in Asia
+### 2.2.3 Countries in Europe
+
+Exports of goods by F.A.S. basis to France https://fred.stlouisfed.org/series/EXPFR
+
+Exports of goods by F.A.S. basis to Germany https://fred.stlouisfed.org/series/EXPGE
+
+
+### 2.2.4 Countries in Asia
 
 Exports of goods by F.A.S. basis to Japan https://fred.stlouisfed.org/series/EXPJP
 
 Exports of goods by F.A.S. basis to South Korea https://fred.stlouisfed.org/series/EXPJP
 
 
-### 2.2.4 Countries in Europe
 
-Exports of goods by F.A.S. basis to France https://fred.stlouisfed.org/series/EXPFR
-
-Exports of goods by F.A.S. basis to Germany https://fred.stlouisfed.org/series/EXPGE
