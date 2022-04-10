@@ -31,5 +31,15 @@ Exports of Goods: General Merchandise: Industrial supplies and materials
 https://fred.stlouisfed.org/series/IEAXGI
 
 
+## Question3: Analyze U.S. export data to China and import data from China
+
+U.S. Exports of Goods by F.A.S. Basis to Mainland China
+https://fred.stlouisfed.org/series/EXPCH
+
+U.S. Imports of Goods by Customs Basis from China
+https://fred.stlouisfed.org/series/IMPCH
+
+
+
 
 
