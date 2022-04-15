@@ -1,11 +1,14 @@
 introduction
+data-sources
+question1-analyze-the-development-process-of-u.s.-export-data
 question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries.
 islands-and-areas-within-the-united-states
 countries-bordering-the-united-states
 countries-in-europe
 countries-in-asia
+question3-analyze-u.s.-export-data-to-china-and-import-data-from-china
 data-transformation
-question1-analyze-the-development-process-of-u.s.-export-data
+question1-analyze-the-development-process-of-u.s.-export-data-1
 overall-trend-in-data-of-exports-of-goods-and-services
 missing-values
 analysis-and-results

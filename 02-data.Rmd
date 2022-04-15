@@ -1,6 +1,38 @@
-# 2.2 Question 2: Analyze the import and export cooperation between the United States and different areas and countries.
+# Data sources
+The data for our project was obtained from this website:
+https://fred.stlouisfed.org/categories/16?t=goods&rt=goods&ob=pv&od=desc
 
-### 2.2.1 Islands and areas within the United States
+## Question1: Analyze the development process of U.S. export data
+Overall data of US exports of goods and services
+https://fred.stlouisfed.org/series/IEAXGS
+
+Overall data of US exports of goods
+https://fred.stlouisfed.org/series/IEAXG
+
+Overall data of US exports of services
+https://fred.stlouisfed.org/series/IEAXS
+
+Exports of Goods: General merchandise
+https://fred.stlouisfed.org/series/IEAXGM
+
+Exports of Goods: General Merchandise: Automotive vehicles, parts, and engines 
+https://fred.stlouisfed.org/series/IEAXGAV
+
+Exports of Goods: General Merchandise: Capital goods except automotive
+https://fred.stlouisfed.org/series/IEAXGC
+
+Exports of Goods: General Merchandise: Consumer goods except food and automotive
+https://fred.stlouisfed.org/series/IEAXGCGA
+
+Exports of Goods: General Merchandise: Foods, feeds, and beverages
+https://fred.stlouisfed.org/series/IEAXGFA
+
+Exports of Goods: General Merchandise: Industrial supplies and materials
+https://fred.stlouisfed.org/series/IEAXGI
+
+# Question 2: Analyze the import and export cooperation between the United States and different areas and countries.
+
+### Islands and areas within the United States
 
 Exports of goods for U.S. Virgin Islands https://fred.stlouisfed.org/series/EXPTOTVI
 
@@ -16,25 +48,36 @@ Exports of goods: manufactured commodities for Puerto Rico https://fred.stlouisf
 Exports of goods: non-manufactured commodities for Puerto Rico https://fred.stlouisfed.org/series/EXPNONPR
 
 
-### 2.2.2 Countries bordering the United States
+### Countries bordering the United States
 
 Exports of goods by F.A.S. basis to Canada https://fred.stlouisfed.org/series/EXPNONVI
 
 Exports of goods by F.A.S. basis to Mexico https://fred.stlouisfed.org/series/EXPMX
 
 
-### 2.2.3 Countries in Europe
+### Countries in Europe
 
 Exports of goods by F.A.S. basis to France https://fred.stlouisfed.org/series/EXPFR
 
 Exports of goods by F.A.S. basis to Germany https://fred.stlouisfed.org/series/EXPGE
 
 
-### 2.2.4 Countries in Asia
+### Countries in Asia
 
 Exports of goods by F.A.S. basis to Japan https://fred.stlouisfed.org/series/EXPJP
 
 Exports of goods by F.A.S. basis to South Korea https://fred.stlouisfed.org/series/EXPJP
+
+
+## Question3: Analyze U.S. export data to China and import data from China
+
+U.S. Exports of Goods by F.A.S. Basis to Mainland China
+https://fred.stlouisfed.org/series/EXPCH
+
+U.S. Imports of Goods by Customs Basis from China
+https://fred.stlouisfed.org/series/IMPCH
+
+
 
 
 
