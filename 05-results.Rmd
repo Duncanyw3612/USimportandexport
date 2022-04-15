@@ -1,1 +1,99 @@
-# Results
+# Analysis and  Results
+
+## The development process of U.S. export data from 1999 to 2021
+
+### Overall data of U.S. export of goods and services
+
+In this part, we want to analyse the development process of U.S. export data.\
+Firstly, we want to see the trend of the U.S. export data on a general level, so we combine three data sets of overall export data of goods and exports to see such trend.
+```{r}
+library(tidyverse)
+g1_1<-Overall%>%
+  ggplot(aes(Date,Value,color=Name))+
+  geom_line()+
+  ggtitle("Exports of goods and serives")+
+  labs(x="",y="Millions of Dollars") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
+
+g1_1
+```
+
+From the picture we can see that:\
+Data on exports in general have been on an upward trend in both services and goods, with the exception of a few few years.\
+We speculate that the fall around 2001 and 2008 may be due to the global financial crisis, and the fall around 2020 may be due to the changes of trade policy towards China and the COVID-19.
+
+### Analysis of General merchandise in the exports of U.S.
+General merchandise can be said to be the most important part of goods. It is closely related to people's livelihood. Our research on general merchandise can reflect the living standard and quality of the American people to a certain extent.\
+Firstly we want to see the trend of exports of general merchandise and the proportion of general merchandise in goods.
+```{r}
+g1_2<-Overall_goods_general_merchandise%>%
+  ggplot(aes(Date,Value,color=Name))+
+  geom_line()+
+  ggtitle("Exports of goods")+
+  labs(x="",y="Millions of Dollars") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
+
+g1_2
+```
+
+
+Now we want to analysis the trend of the data of different types of general merchandise, and we also want see the relationships between them.
+```{r}
+library(corrplot)
+M<-cor(Different_types_of_GM[,2:6])
+corrplot(M, method = 'color')
+
+g1_3<-Different_types_of_GM_new%>%
+  ggplot(aes(Date,Value,color=Type))+
+  geom_line()+
+  ggtitle("Exports of different types of general merchandise")+
+  labs(x="",y="Millions of Dollars") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
+
+g1_3
+
+```
+
+As we can see from the plot:\
+(a) The trends of data changes for almost all types general merchandise are the same;\
+(b) The industrial supplies and materials and capital are greatly affected by the economic situation in the world;\
+(c) The type of food, feeds and beverages is less affected by world economic fluctuations.\
+(d) The relationships between those types of merchandise seem to be all positive.\
+
+We can also do the interactive version of this plot to get some intuitive outcomes.
+```{r}
+library(plotly)
+ggplotly(g1_3)
+```
+
+
+
+
+
+We can also use the index to compare the trends of the data among different types of general merchandise. This method is considered more fairly.
+```{r}
+g1_4<-Different_types_of_GM_Index%>%
+  ggplot(aes(Date,Index,color=Type))+
+  geom_line()+
+  ggtitle("Exports of different types of general merchandise")+
+  labs(x="",y="Index") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
+
+g1_4
+
+```
+
+From this plot we can conclude that:
+(a) The data of industrial supplies and materials had the most dramatic changes in the past two decades;\
+(b) Except for type of food, feeds and beverages, all other types of data suffered huge declines around 2020.\
+
+
+
+
+
+
+

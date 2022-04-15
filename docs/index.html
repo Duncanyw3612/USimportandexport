@@ -23,7 +23,7 @@
 <meta name="author" content="Yudong Zhou &amp; Yanbo Wang" />
 
 
-<meta name="date" content="2022-04-09" />
+<meta name="date" content="2022-04-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="data-sources.html"/>
+<link rel="next" href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 
 
 
@@ -73,19 +80,31 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources<span></span></a></li>
-<li class="chapter" data-level="3" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><i class="fa fa-check"></i><b>3</b> 2.2 Question 2: Analyze the import and export cooperation between the United States and different areas and countries.<span></span></a>
+<li class="chapter" data-level="2" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><i class="fa fa-check"></i><b>2</b> 2.2 Question 2: Analyze the import and export cooperation between the United States and different areas and countries.<span></span></a>
 <ul>
-<li class="chapter" data-level="3.0.1" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#islands-and-areas-within-the-united-states"><i class="fa fa-check"></i><b>3.0.1</b> 2.2.1 Islands and areas within the United States<span></span></a></li>
-<li class="chapter" data-level="3.0.2" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-bordering-the-united-states"><i class="fa fa-check"></i><b>3.0.2</b> 2.2.2 Countries bordering the United States<span></span></a></li>
-<li class="chapter" data-level="3.0.3" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-in-europe"><i class="fa fa-check"></i><b>3.0.3</b> 2.2.3 Countries in Europe<span></span></a></li>
-<li class="chapter" data-level="3.0.4" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-in-asia"><i class="fa fa-check"></i><b>3.0.4</b> 2.2.4 Countries in Asia<span></span></a></li>
+<li class="chapter" data-level="2.0.1" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#islands-and-areas-within-the-united-states"><i class="fa fa-check"></i><b>2.0.1</b> 2.2.1 Islands and areas within the United States<span></span></a></li>
+<li class="chapter" data-level="2.0.2" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-bordering-the-united-states"><i class="fa fa-check"></i><b>2.0.2</b> 2.2.2 Countries bordering the United States<span></span></a></li>
+<li class="chapter" data-level="2.0.3" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-in-europe"><i class="fa fa-check"></i><b>2.0.3</b> 2.2.3 Countries in Europe<span></span></a></li>
+<li class="chapter" data-level="2.0.4" data-path="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html"><a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html#countries-in-asia"><i class="fa fa-check"></i><b>2.0.4</b> 2.2.4 Countries in Asia<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>4</b> Data transformation<span></span></a></li>
-<li class="chapter" data-level="5" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>5</b> Missing values<span></span></a></li>
-<li class="chapter" data-level="6" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>6</b> Results<span></span></a></li>
-<li class="chapter" data-level="7" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>7</b> Interactive component<span></span></a></li>
-<li class="chapter" data-level="8" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>8</b> Conclusion<span></span></a></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#question1-analyze-the-development-process-of-u.s.-export-data"><i class="fa fa-check"></i><b>3.1</b> Question1: Analyze the development process of U.S. export data<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="data-transformation.html"><a href="data-transformation.html#overall-trend-in-data-of-exports-of-goods-and-services"><i class="fa fa-check"></i><b>3.1.1</b> Overall trend in data of exports of goods and services<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values<span></span></a></li>
+<li class="chapter" data-level="5" data-path="analysis-and-results.html"><a href="analysis-and-results.html"><i class="fa fa-check"></i><b>5</b> Analysis and Results<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="analysis-and-results.html"><a href="analysis-and-results.html#the-development-process-of-u.s.-export-data-from-1999-to-2021"><i class="fa fa-check"></i><b>5.1</b> The development process of U.S. export data from 1999 to 2021<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="analysis-and-results.html"><a href="analysis-and-results.html#overall-data-of-u.s.-export-of-goods-and-services"><i class="fa fa-check"></i><b>5.1.1</b> Overall data of U.S. export of goods and services<span></span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="analysis-and-results.html"><a href="analysis-and-results.html#analysis-of-general-merchandise-in-the-exports-of-u.s."><i class="fa fa-check"></i><b>5.1.2</b> Analysis of General merchandise in the exports of U.S.<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component<span></span></a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -108,10 +127,23 @@
 <div id="header">
 <h1 class="title">US import and export analysis</h1>
 <p class="author"><em>Yudong Zhou &amp; Yanbo Wang</em></p>
-<p class="date"><em>2022-04-09</em></p>
+<p class="date"><em>2022-04-15</em></p>
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this project, we are gonna mainly analyze these three following problems:</p>
+<ol style="list-style-type: decimal">
+<li><p>Analyze the development process of U.S. export data from multiple perspectives such as merchandise, daily necessities, and industrial materials. Visualize the development of different industries to check whether does there exist developing trends.</p></li>
+<li><p>Analyze the data of import and export cooperation between the United States and different countries. Visualize the data to find out whether there are some similarities and differences between the cooperation.</p></li>
+<li><p>Analyze U.S. export data to China. After the data wrangling and visualization, check if there exists changes in export structure before and after the Sino-U.S. trade war.</p></li>
+</ol>
+<p>Also our work will focus on several parts shown below:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Basic data analysis and data wrangling, including multivariate data and time series data.</p></li>
+<li><p>Basic data visualization, including barplot and boxplot to figure out relationships with and between multivariate data, and zigzag lines to demonstrate changing trend of time series data.</p></li>
+<li><p>Advanced data visualization, including interactive relationship plots, geographic maps, interactive heatmaps and linear model analysis graphs.</p></li>
+<li><p>Comparisons and summaries based on data analysis and exploratory data analysis.</p></li>
+</ol>
 
 </div>
             </section>
@@ -120,7 +152,7 @@
         </div>
       </div>
 
-<a href="data-sources.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="question-2-analyze-the-import-and-export-cooperation-between-the-united-states-and-different-areas-and-countries..html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

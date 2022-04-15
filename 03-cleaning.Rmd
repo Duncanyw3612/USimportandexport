@@ -1,1 +1,152 @@
 # Data transformation
+
+## Question1: Analyze the development process of U.S. export data
+
+### Overall trend in data of exports of goods and services
+
+Transformation of overall data of US exports of goods and services
+```{r}
+library(tidyverse)
+library(readxl)
+overall_data_exports_goods_services<-read_excel(here::here("IEAXGS.xls"))
+overall_data_exports_goods_services<-overall_data_exports_goods_services[-(1:10),]
+colnames(overall_data_exports_goods_services)<-c("Date","Goods and services")
+overall_data_exports_goods_services<-overall_data_exports_goods_services%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of overall data of US exports of goods
+```{r}
+overall_data_exports_goods<-read_excel(here::here("IEAXG.xls"))
+overall_data_exports_goods<-overall_data_exports_goods[-(1:10),]
+colnames(overall_data_exports_goods)<-c("Date","Goods")
+overall_data_exports_goods<-overall_data_exports_goods%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of overall data of US exports of services
+```{r}
+overall_data_exports_services<-read_excel(here::here("IEAXS.xls"))
+overall_data_exports_services<-overall_data_exports_services[-(1:10),]
+colnames(overall_data_exports_services)<-c("Date","Services")
+overall_data_exports_services<-overall_data_exports_services%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Join the above three data sets
+```{r}
+Overall<-left_join(overall_data_exports_goods_services,overall_data_exports_goods)
+Overall<-left_join(Overall,overall_data_exports_services)
+Overall<-Overall%>%
+  gather(key=Name,value=Value,-Date)%>%
+  mutate(Name=forcats::fct_reorder2(Name,Date,Value))%>%
+  mutate(Value=as.numeric(Value))
+```
+
+Transformation of the data of general merchandise
+```{r}
+general_merchandise<-read_excel(here::here("IEAXGM.xls"))
+general_merchandise<-general_merchandise[-(1:10),]
+colnames(general_merchandise)<-c("Date","General_merchandise")
+general_merchandise<-general_merchandise%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Join the data sets of general merchandise and goods
+```{r}
+Overall_goods_general_merchandise<-left_join(overall_data_exports_goods,general_merchandise)
+Overall_goods_general_merchandise<-Overall_goods_general_merchandise%>%
+  gather(key=Name,value=Value,-Date)%>%
+  mutate(Name=forcats::fct_reorder2(Name,Date,Value))%>%
+  mutate(Value=as.numeric(Value))
+```
+
+Transformation of the data of general merchandise: Automotive vehicles, parts, and engines 
+```{r}
+gm_avpe<-read_excel(here::here("IEAXGAV.xls"))
+gm_avpe<-gm_avpe[-(1:10),]
+colnames(gm_avpe)<-c("Date","GM_AVPE")
+gm_avpe<-gm_avpe%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of the data of general merchandise: Capital goods except automotive 
+```{r}
+gm_capital<-read_excel(here::here("IEAXGC.xls"))
+gm_capital<-gm_capital[-(1:10),]
+colnames(gm_capital)<-c("Date","GM_capital")
+gm_capital<-gm_capital%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of the data of general merchandise: Consumer goods except food and automotive
+```{r}
+gm_consumer_goods<-read_excel(here::here("IEAXGCG.xls"))
+gm_consumer_goods<-gm_consumer_goods[-(1:10),]
+colnames(gm_consumer_goods)<-c("Date","GM_consumer_goods")
+gm_consumer_goods<-gm_consumer_goods%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of the data of general merchandise: Foods, feeds, and beverages
+```{r}
+gm_food_feeds_beverages<-read_excel(here::here("IEAXGF.xls"))
+gm_food_feeds_beverages<-gm_food_feeds_beverages[-(1:10),]
+colnames(gm_food_feeds_beverages)<-c("Date","Gm_food_feeds_beverages")
+gm_food_feeds_beverages<-gm_food_feeds_beverages%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Transformation of the data of general merchandise: Industrial supplies and materials
+```{r}
+gm_industrial_supplies_materials<-read_excel(here::here("IEAXGI.xls"))
+gm_industrial_supplies_materials<-gm_industrial_supplies_materials[-(1:10),]
+colnames(gm_industrial_supplies_materials)<-c("Date","Gm_industrial_supplies_materials")
+gm_industrial_supplies_materials<-gm_industrial_supplies_materials%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))
+```
+
+Join the above 5 data sets
+```{r}
+Different_types_of_GM<-left_join(gm_avpe,gm_capital)%>%
+  left_join(.,gm_consumer_goods)%>%
+  left_join(.,gm_food_feeds_beverages)%>%
+  left_join(.,gm_industrial_supplies_materials)%>%
+  mutate(GM_AVPE=as.numeric(GM_AVPE))%>%
+  mutate(GM_capital=as.numeric(GM_capital))%>%
+  mutate(GM_consumer_goods=as.numeric(GM_consumer_goods))%>%
+  mutate(Gm_food_feeds_beverages=as.numeric(Gm_food_feeds_beverages))%>%
+  mutate(Gm_industrial_supplies_materials=as.numeric(Gm_industrial_supplies_materials))
+
+Different_types_of_GM_new<-Different_types_of_GM%>%
+  gather(key=Type,value=Value,-Date)%>%
+  mutate(Type=forcats::fct_reorder2(Type,Date,Value))%>%
+  mutate(Value=as.numeric(Value))
+  
+```
+
+Create the index to compare the trends among different merchandise
+```{r}
+Different_types_of_GM_Index<-Different_types_of_GM_new%>%
+  group_by(Type)%>%
+  mutate(Index=round(100*Value/Value[1],2))%>% 
+  ungroup()
+```
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,3 @@
-# Data sources
-
 # 2.2 Question 2: Analyze the import and export cooperation between the United States and different areas and countries.
 
 ### 2.2.1 Islands and areas within the United States
