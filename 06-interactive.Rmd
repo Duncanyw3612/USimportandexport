@@ -1,3 +1,30 @@
 # Interactive component
 
+## Trend of different types of general merchandise
+```{r}
+g1_3<-Different_types_of_GM_new%>%
+  ggplot(aes(Date,Value,color=Type))+
+  geom_line()+
+  ggtitle("Exports of different types of general merchandise")+
+  labs(x="",y="Millions of Dollars") +
+  theme_grey(16) +
+  theme(legend.title = element_blank())
 
+library(plotly)
+ggplotly(g1_3)
+```
+Similarly, we can also draw these following conclusions based on this interactive plot:\
+(a) The trends of data changes for almost all types general merchandise are the same;\
+(b) The industrial supplies and materials and capital are greatly affected by the economic situation in the world;\
+(c) The type of food, feeds and beverages is less affected by world economic fluctuations.\
+(d) The relationships between those types of merchandise seem to be all positive.\
+
+## Export volumes of different countries
+```{r}
+library(plotly)
+(g_interactive <- data_combined %>%
+    plot_ly(x = ~Date, y = ~Value, color = ~location))
+```
+From this interactive data point plot, we are able to say that: \
+1. From the old time to the present, the number of U.S. exports to Canada and Mexico increased significantly compared to the other four countries, which means that the United States pays more attention to cooperative relations with its neighboring countries. \
+2. The U.S. exports less to a single country in Europe and Asia, which is totally understandable. In the real world, the United States mostly completes the cooperation and development in the European region through the European Union and NATO, and mostly completes the cooperation and development in the Asian region through the Asia-Pacific organization.\

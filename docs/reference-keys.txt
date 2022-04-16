@@ -25,4 +25,6 @@ try-to-make-graphs-based-on-transformed-data---islands-and-areas-within-the-unit
 try-to-compare-us-export-data-to-different-countries---using-corrplot-and-barplot
 the-data-of-u.s.-exports-to-china-and-imports-from-china
 interactive-component
+trend-of-different-types-of-general-merchandise
+export-volumes-of-different-countries
 conclusion
