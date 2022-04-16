@@ -15,3 +15,8 @@ library(lubridate)
   labs(y = "Year",
        x = "Area Name"))
 ```
+
+In this Missing Values part, we can have these following conclusions: \
+1. The original data of U.S. exports are quite clean and organized. As a result, we fail to have plenty of missing values to analyze and visualize. \
+2. In this missing-value tile plot, we are easily able to figure out that in the year of 1995, 1998, 1999, 2000, 2001 and 2005, there exists missing values in the U.S. exports to Virgin Islands. \
+3. The pattern of missing values vividly reflects U.S. real world export and cooperation policies - just like aforementioned years with missing values, U.S. apparently did not have any exports to the Virgin Islands within the States during those time periods.
