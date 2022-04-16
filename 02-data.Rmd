@@ -30,6 +30,44 @@ https://fred.stlouisfed.org/series/IEAXGFA
 Exports of Goods: General Merchandise: Industrial supplies and materials
 https://fred.stlouisfed.org/series/IEAXGI
 
+## Question 2: Analyze the import and export cooperation between the United States and different areas and countries.
+
+### Islands and areas within the United States
+
+Exports of goods for U.S. Virgin Islands https://fred.stlouisfed.org/series/EXPTOTVI
+
+Exports of goods: manufactured commodities for U.S. Virgin Island https://fred.stlouisfed.org/series/EXPMANVI
+
+Exports of goods: non-manufactured commodities for U.S. Virgin Island https://fred.stlouisfed.org/series/EXPNONVI
+
+
+Exports of goods for Puerto Rico https://fred.stlouisfed.org/series/EXPNONPR
+
+Exports of goods: manufactured commodities for Puerto Rico https://fred.stlouisfed.org/series/EXPMANPR
+
+Exports of goods: non-manufactured commodities for Puerto Rico https://fred.stlouisfed.org/series/EXPNONPR
+
+
+### Countries bordering the United States
+
+Exports of goods by F.A.S. basis to Canada https://fred.stlouisfed.org/series/EXPNONVI
+
+Exports of goods by F.A.S. basis to Mexico https://fred.stlouisfed.org/series/EXPMX
+
+
+### Countries in Europe
+
+Exports of goods by F.A.S. basis to France https://fred.stlouisfed.org/series/EXPFR
+
+Exports of goods by F.A.S. basis to Germany https://fred.stlouisfed.org/series/EXPGE
+
+
+### Countries in Asia
+
+Exports of goods by F.A.S. basis to Japan https://fred.stlouisfed.org/series/EXPJP
+
+Exports of goods by F.A.S. basis to South Korea https://fred.stlouisfed.org/series/EXPJP
+
 
 ## Question3: Analyze U.S. export data to China and import data from China
 
