@@ -46,6 +46,8 @@ Overall<-Overall%>%
   mutate(Value=as.numeric(Value))
 ```
 
+### Analysis of General merchandise in the exports of U.S.
+
 Transformation of the data of general merchandise
 ```{r}
 general_merchandise<-read_excel(here::here("IEAXGM.xls"))
@@ -142,10 +144,152 @@ Different_types_of_GM_Index<-Different_types_of_GM_new%>%
   ungroup()
 ```
 
+## Question 2 Analyze the data of export cooperation between the United States and different countries
 
+Introduce all of these data to take the first good look of them
+```{r}
+# Islands and areas within the United States
+library(tidyverse)
+goods_island <- read_csv(here::here("exports_goods_us_island.csv"))
+manu_island <- read_csv(here::here("manufactured_commodity_us_island.csv"))
+nonmanu_island <- read_csv(here::here("nonmanufactured_commodity_us_island.csv"))
 
+goods_pr <- read_csv(here::here("exports_goods_puerto_rico.csv"))
+manu_pr <- read_csv(here::here("manufactured_commodity_puerto_rico.csv"))
+nonmanu_pr <- read_csv(here::here("nonmanufactured_commodity_puerto_rico.csv"))
 
+# Countries bordering the United States
+canada_goods <- read_csv(here::here("export_goods_canada.csv"))
+mexico_goods <- read_csv(here::here("export_goods_mexico.csv"))
 
+# Countries in Europe
+france_goods <- read_csv(here::here("export_goods_france.csv"))
+germany_goods <- read_csv(here::here("export_goods_germany.csv"))
+
+# Countries in Asia
+japan_goods <- read_csv(here::here("export_goods_japan.csv"))
+korea_goods <- read_csv(here::here("export_goods_korea.csv"))
+```
+
+Basic transformations of data frame
+```{r}
+# Island data
+goods_island <- goods_island %>%
+  rename(Date = DATE, goods_island = EXPTOTVI)
+manu_island <- manu_island %>%
+  rename(Date = DATE, manufactured_island = EXPMANVI)
+nonmanu_island <- nonmanu_island %>%
+  rename(Date = DATE, nonmanufactured_island = EXPNONVI)
+nonmanu_island$nonmanufactured_island <- as.numeric(nonmanu_island$nonmanufactured_island)
+
+# Puerto Rico data
+goods_pr <- goods_pr %>%
+  rename(Date = DATE, goods_pr = EXPTOTPR)
+manu_pr <- manu_pr %>%
+  rename(Date = DATE, manufactured_pr = EXPMANPR)
+nonmanu_pr <- nonmanu_pr %>%
+  rename(Date = DATE, nonmanufactured_pr = EXPNONPR)
+
+# Canada and Mexico data
+canada_goods <- canada_goods %>%
+  rename(Date = DATE, goods_canada = EXPCA)
+mexico_goods <- mexico_goods %>%
+  rename(Date = DATE, goods_mexico = EXPMX)
+
+# Germany and France data
+germany_goods <- germany_goods %>%
+  rename(Date = DATE, goods_germany = EXPGE)
+france_goods <- france_goods %>%
+  rename(Date = DATE, goods_france = EXPFR)
+
+# Japan and Korea data
+japan_goods <- japan_goods %>%
+  rename(Date = DATE, goods_japan = EXPJP)
+korea_goods <- korea_goods %>%
+  rename(Date = DATE, goods_korea = EXPKR)
+```
+
+Join different data frames to create new data - Type I data about islands and areas within the United States
+```{r}
+# Island data
+island_dat <- goods_island %>%
+  left_join(manu_island) %>%
+  left_join(nonmanu_island)
+
+# Puerto Rico data
+pr_dat <- goods_pr %>%
+  left_join(manu_pr) %>%
+  left_join(nonmanu_pr)
+
+# Type I data - Islands and areas within the United States
+data <- island_dat %>%
+  left_join(pr_dat)
+data1 <- data %>%
+  pivot_longer(cols = 2:7, names_to = "Type", values_to = "Value") %>%
+  mutate(location = ifelse(str_detect(Type, "island"), "US Island", "Puerto Rico"))
+```
+
+Join different data frames to create new data - Type II data about countries bordering the United States
+```{r}
+data2_temp <- canada_goods %>%
+  left_join(mexico_goods)
+data2 <- data2_temp %>%
+  pivot_longer(cols = 2:3, names_to = "Type", values_to = "Value") %>%
+  mutate(location = ifelse(str_detect(Type, "canada"), "Canada", "Mexico"))
+```
+
+Join different data frames to create new data - Type III data about countries in Europe
+```{r}
+data3_temp <- france_goods %>%
+  left_join(germany_goods)
+data3 <- data3_temp %>%
+  pivot_longer(cols = 2:3, names_to = "Type", values_to = "Value") %>%
+  mutate(location = ifelse(str_detect(Type, "france"), "France", "Germany"))
+```
+
+Join different data frames to create new data - Type IV data about countries in Asia
+```{r}
+data4_temp <- japan_goods %>%
+  left_join(korea_goods)
+data4 <- data4_temp %>%
+  pivot_longer(cols = 2:3, names_to = "Type", values_to = "Value") %>%
+  mutate(location = ifelse(str_detect(Type, "japan"), "Japan", "South Korea"))
+```
+
+## Question3: Analyze U.S. export data to China
+
+Transformation of the data of U.S. Exports of Goods by F.A.S. Basis to Mainland China
+```{r}
+library(readxl)
+Exports_Mainland_China<-read_excel(here::here("EXPCH.xls"))
+Exports_Mainland_China<-Exports_Mainland_China[-(1:10),]
+colnames(Exports_Mainland_China)<-c("Date","Exports_Mainland_China")
+Exports_Mainland_China<-Exports_Mainland_China%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))%>%
+  mutate(Exports_Mainland_China=as.numeric(Exports_Mainland_China))
+```
+
+Transformation of the data of U.S. Imports of Goods by Customs Basis from China
+```{r}
+Imports_China<-read_excel(here::here("IMPCH-2.xls"))
+Imports_China<-Imports_China[-(1:10),]
+colnames(Imports_China)<-c("Date","Imports_China")
+Imports_China<-Imports_China%>%
+  mutate(Date=as.numeric(Date))%>%
+  mutate(Date=as.Date(Date,origin="1899-12-30"))%>%
+  mutate(Imports_China=as.numeric(Imports_China))
+```
+ 
+Join the data sets of U.S. imports from China and U.S. exports to China
+```{r}
+Ex_Im_China<-left_join(Exports_Mainland_China,Imports_China)
+
+Ex_Im_China_new<-Ex_Im_China%>%
+  gather(key=Type,value=Value,-Date)%>%
+  mutate(Type=forcats::fct_reorder2(Type,Date,Value))
+  
+```
 
 
 
