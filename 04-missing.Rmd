@@ -1,1 +1,17 @@
 # Missing values
+
+```{r}
+# Missing Value graphs
+library(lubridate)
+(g12 <- data1 %>%
+  filter(!Type %in% c("goods_island", "goods_pr")) %>%
+  mutate(missing = ifelse(is.na(Value), "yes", "no")) %>%
+  mutate(Date = factor(year(Date))) %>%
+  ggplot(., aes(x = location, y = fct_rev(Date), fill = missing)) +
+  geom_tile(color = "white") +
+  ggtitle("Exports to islands and areas within the United States with NAs added") +
+  scale_fill_viridis_d() +
+  theme_bw() +
+  labs(y = "Year",
+       x = "Area Name"))
+```
